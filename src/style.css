@@ -1,1 +1,78 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background-color: darkgreen;
+  margin: 0;
+}
+
+.card {
+  margin-left: 45%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: white;
+  color: black;
+  font-size: 45px;
+  font-family: serif;
+}
+
+.card.red {
+  color: red;
+}
+
+.card::before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: -5px;
+  left: 10px;
+  font-size: 2.5rem;
+}
+
+.card::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  bottom: -5px;
+  right: 10px;
+  transform: rotate(180deg);
+  font-size: 2.5rem;
+}
+
+.card.clubs::before {
+  content: "♣";
+}
+.card.clubs::after {
+  content: "♣";
+}
+
+.card.diamonds::before {
+  content: "♦";
+}
+.card.diamonds::after {
+  content: "♦";
+}
+
+.card.hearts::before {
+  content: "♥";
+}
+.card.hearts::after {
+  content: "♥";
+}
+
+.card.spades::before {
+  content: "♠";
+}
+.card.spades::after {
+  content: "♠";
+}
